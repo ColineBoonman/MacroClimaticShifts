@@ -5,10 +5,11 @@ The 'MacroClimaticShifts' repository includes all processed data, scripts and ou
 
 Coline C.F. Boonman, Selwyn Hoeks, Josep M. Serra-Diaz, Wen-Yong Guo, Brian J. Enquist, Brian Maitner, Cory Merow, Jens-Christian Svenning, (2024). XXX. In Review.
 
-- Species’ extent (95% minimum convex hull) can be downloaded as spatial polygons (Global.polygon.shp) - please note that water, urban areas and unsuitable climate zones are not removed from these polygons
+- Species’ extent (99% minimum convex hull) can be downloaded as spatial polygons (Global.polygon.shp) - please note that water, urban areas and unsuitable climate zones are not removed from these polygons
 - Species richness maps (overlay of species' range) is provided as spRichMap_masked.tif, where masked referes to the removal of water and urban areas, whereas unsuitable climate was remover per species. This map is used to create relative tree diversity exposure maps.
 - Under the non-analogue framework, we created a 32nd climate zone (Non-Analogue Hotter). Climate zone maps under this new framework are provided per climate model (5) and greenhouse scenario (3) as .tif files in the zipped folder 'NonAnalogueRasters_2023_10_02.zip'. We also include png files to illustrate the location of the new climate zone (number 32) and the climate zones that were considered for transformation to a hotter non-analogue climate zone - see Methods of manuscript and Supplematary Information for more detail.
 - In the folder SpeciesClimateExposureMeanSE, you can find the rasters as .tif (and related .png files for easy visualization) for the relative tree diversity (%) exposed to macroclimatic shifts, as average over the five climate models (indicated with 'Mean') or as Standard Error (indicated with SE) as described in the Methods section of the manuscript.
+- In the Data folder, you can find the file Current_kg2_zonalHist_pointsBuffered1000m_spaggr.fst, which can  be opened in R using the fst package. In this file, you can find the species precenses over the 32 different climate zones.
 
 - All code used to generate non-analogue hotter climate zones can be found on the Github account of Selwyn Hoeks (SHoeks).
 - All code used to calculate species ranges and exposure to macroclimatic shifts can be found on the Github account of Selwyn Hoeks (SHoeks).
