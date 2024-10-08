@@ -5,16 +5,15 @@ The 'MacroClimaticShifts' repository includes all processed data, scripts and ou
 
 Coline C.F. Boonman, Selwyn Hoeks, Josep M. Serra-Diaz, Wen-Yong Guo, Brian J. Enquist, Brian Maitner, Cory Merow, Jens-Christian Svenning, (2024). XXX. In Review.
 
-- Species’ extent (99% minimum convex hull) can be downloaded as spatial polygons (Global.polygon.shp) - please note that water, urban areas and unsuitable climate zones are not removed from these polygons
-- Species richness maps (overlay of species' range) is provided as spRichMap_masked.tif, where masked referes to the removal of water and urban areas, whereas unsuitable climate was remover per species. This map is used to create relative tree diversity exposure maps.
-- Under the non-analogue framework, we created a 32nd climate zone (Non-Analogue Hotter). Climate zone maps under this new framework are provided per climate model (5) and greenhouse scenario (3) as .tif files in the zipped folder 'NonAnalogueRasters_2023_10_02.zip'. We also include png files to illustrate the location of the new climate zone (number 32) and the climate zones that were considered for transformation to a hotter non-analogue climate zone - see Methods of manuscript and Supplematary Information for more detail.
-- In the folder SpeciesClimateExposureMeanSE, you can find the rasters as .tif (and related .png files for easy visualization) for the relative tree diversity (%) exposed to macroclimatic shifts, as average over the five climate models (indicated with 'Mean') or as Standard Error (indicated with SE) as described in the Methods section of the manuscript.
-- In the Data folder, you can find the file Current_kg2_zonalHist_pointsBuffered1000m_spaggr.fst, which can  be opened in R using the fst package. In this file, you can find the species precenses over the 32 different climate zones.
-
+- Species’ extent (99% minimum convex hull) can be downloaded as spatial polygons from figshare (Global.polygon.shp) - please note that water, urban areas and unsuitable climate zones are not removed from these polygons
+- Species richness maps (overlay of species' range) is provided via figshare as spRichMap_masked.tif, where masked referes to the removal of water and urban areas, whereas unsuitable climate was remover per species. This map is used to create relative tree diversity exposure maps.
+- Under the non-analogue framework, we created a 32nd climate zone (Non-Analogue Hotter). Climate zone maps under this new framework are provided per climate model (5) and greenhouse scenario (3) as .tif files in the zipped folder 'NonAnalogueRasters_2023_10_02.zip' on figshare. We also include png files to illustrate the location of the new climate zone (number 32) and the climate zones that were considered for transformation to a hotter non-analogue climate zone - see Methods of manuscript and Supplematary Information for more detail.
+- In the SpeciesClimateExposureMeanSE.zip on figshare, you can find the rasters as .tif (and related .png files for easy visualization) for the relative tree diversity (%) exposed to macroclimatic shifts, as average over the five climate models (indicated with 'Mean') or as Standard Error (indicated with SE) as described in the Methods section of the manuscript.
+   
 - All code used to generate non-analogue hotter climate zones can be found on the Github account of Selwyn Hoeks (SHoeks).
 - All code used to calculate species ranges and exposure to macroclimatic shifts can be found on the Github account of Selwyn Hoeks (SHoeks).
 - All code to produce global maps concerning the average and standard error of future tree diversity exposure as well as the tree species richness map can be found on the Github account of Selwyn Hoeks (SHoeks).
-- All the R code that was used to process the data and create the figures are available numbered by the order of use:
+- In the Rcode folder on this Github, you can find all the R code that was used to process the data and create the figures are available numbered by the order of use:
   - 0.Get.Data.R which requires GetDataFunction.R
   - 1.Create.Dataset.R
   - 2.Prepare.Global.Maps.R
@@ -22,8 +21,12 @@ Coline C.F. Boonman, Selwyn Hoeks, Josep M. Serra-Diaz, Wen-Yong Guo, Brian J. E
   - 4.Figures.nomaps.R
   - 5.Numbers.Figures.DiscussionSection.R
   
-- All species information can be found in ClimateRefugia.txt for the original framework, and in ClimateRefugia_NonAnalogue.txt for the non-analogue framework. Each row (n=32,094) is a species and each column (n=29) contains different information. The word 'lost' indicates exposure to macroclimatic shifts under the future climate change scenario indicated in the name ssp126 stands for greenhouse gas emission scenario SSP1 RCP2.6, ssp370 stands for greenhouse gas emission scenario SSP3 RCP7.0, ssp585 stands for greenhouse gas emission scenario SSP5 RCP8.5.
-  - The files are saved with comma seperator, dot decimal, including header.
+- In the Data folder, you can find the following files:
+	- Current_kg2_zonalHist_pointsBuffered1000m_spaggr.fst, which can  be opened in R using the fst package. In this file, you can find the species precenses over the 32 different climate zones.
+	- ClimateRefugia.txt, where all species information can be found for the original framework. The file is saved with comma seperator, dot decimal, including header.
+	- ClimateRefugia_NonAnalogue.txt, where all species information can be found for the non-analogue framework. The file is saved with comma seperator, dot decimal, including header.
+ - For the latter two documents, each row (n=32,094) is a species and each column (n=29) contains different information.
+The word 'lost' indicates exposure to macroclimatic shifts under the future climate change scenario indicated in the name ssp126 stands for greenhouse gas emission scenario SSP1 RCP2.6, ssp370 stands for greenhouse gas emission scenario SSP3 RCP7.0, ssp585 stands for greenhouse gas emission scenario SSP5 RCP8.5.
   - Columns names and units:
     - 1.'species' species names, bound by _
     - 2.'suitable_climate_InRange_m2' species range (already excluding water, urban, and unsuitable climate zones), with the unit m2 (to convert to km2, divide the EOO by 1,000,000)
