@@ -3,7 +3,7 @@
 ### About
 The 'MacroClimaticShifts' repository includes all processed data, scripts and output of this scientific paper:
 
-Coline C.F. Boonman, Selwyn Hoeks, Josep M. Serra-Diaz, Wen-Yong Guo, Brian J. Enquist, Brian Maitner, Cory Merow, Jens-Christian Svenning, (2024). XXX. In Review.
+Coline C.F. Boonman, Selwyn Hoeks, Josep M. Serra-Diaz, Wen-Yong Guo, Brian J. Enquist, Brian Maitner, Cory Merow, Jens-Christian Svenning, (2025). PNAS. In Print.
 
 - Species’ extent (99% minimum convex hull) can be downloaded as spatial polygons from Figshare (Global.polygon.shp) - please note that water, urban areas and unsuitable climate zones are not removed from these polygons.
 - Species' ranges can be downloaded on Figshare as shape files, too. Due to the size of these files, they are wrapped per ~1,000 species into a .7z package in which you find a .gpkg file. In the included SpeciesList.csv, you can find which .gpkg file contains which species.
